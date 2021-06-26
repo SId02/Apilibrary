@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bulma.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Apilibrary  | Using Public Api</title>
+  </head>
+
+  <body>
+    <!-- banner -->
+    <div>
+      <section class="hero is-large">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <p class="title has-text-black">
+              Get list of free APIs for use in Development
+            </p>
+            <div class="select is-hovered">
+              <select class="categories">
+                <option >Select Category</option>
+                 <option value="" disabled>------------------</option>
+                <option value="Animals">Animals</option>
+                <option value="Anime ">Anime</option>
+                <option value="Anti-Malware">Anti-Malware</option>
+                <option value="Art">Art</option>
+                <option value="Books">Books</option>
+                <option value="Business">Business</option>
+                <option value="Calendar">Calendar</option>
+                <option value="Cloud Storage">Cloud Storage</option>
+                <option value="Continuous Integration">
+                  Continuous Integration
+                </option>
+                <option value="Cryptocurrency">Cryptocurrency</option>
+                <option value="Currency Exchange">Currency Exchange</option>
+                <option value="Data Validation">Data Validation</option>
+                <option value="Development">Development</option>
+                <option value="Dictionaries">Dictionaries</option>
+                <option value="Environment">Environment</option>
+                <option value="Events">Events</option>
+                <option value="Finance">Finance</option>
+                <option value="Food">Food</option>
+                <option value="Games">Games</option>
+                <option value="Geocoding">Geocoding</option>
+                <option value="Government">Government</option>
+                <option value="Health">Health</option>
+                <option value="Jobs">Jobs</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Music">Music</option>
+                <option value="News">News</option>
+                <option value="Open Data">Open Data</option>
+                <option value="Open Source Projects">
+                  Open Source Projects
+                </option>
+                <option value="Patent">Patent</option>
+                <option value="Personality">Personality</option>
+                <option value="Photography">Photography</option>
+                <option value="Productivity">Productivity</option>
+                <option value="Science">Science</option>
+                <option value="Security">Security</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Social">Social</option>
+                <option value="Sports">Sports</option>
+                <option value="Test Data">Test Data</option>
+                <option value="Text Analysis">Text Analysis</option>
+                <option value="Tracking">Tracking</option>
+                <option value="Transportation">Transportation</option>
+                <option value="URL Shorteners">URL Shorteners</option>
+                <option value="Vehicle">Vehicle</option>
+                <option value="Video">Video</option>
+                <option value="Weather">Weather</option>
+              </select>
+            </div>
+             <button class="button has-text-grey-darker is-info is-outlined getApiBtn">
+              Get Apis
+            </button>
+          </div>
+          <div class="container p-5 has-text-centered">
+            <h3
+              class="m-3 is-size-4 has-text-black has-text-weight-medium count"
+            ></h3>
+            <div class="text-center loading"></div>
+            <div class="text-center errormsg"></div>
+          </div>
+        </div>
+      
+      </section>
+    </div>
+    <!-- banner ends -->
+
+    <!-- data display -->
+    <section class="section dataDisplay">
+      <div class="container py-4 has-text-centered">
+        <div class="columns is-multiline apiDataDisplay">
+          <!-- data here -->
+        </div>
+      </div>
+    </section>
+    <!-- data display -->
+
+    <!-- footer -->
+    <footer class="footer has-background-light">
+      <div class="content has-text-centered">
+        <p class="subtitle">
+          <strong> Apilibrary </strong> Made by
+          <a href="https://www.github.com/Sid02">Sid02</a>. Using
+          <a href="https://api.publicapis.org/">Public Api</a>.
+        </p>
+      </div>
+    </footer>
+    <!-- footer ends -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+
+
