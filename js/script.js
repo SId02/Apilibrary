@@ -50,10 +50,10 @@ const renderErrorMsg = () => {
   let errorMsg = `
 <div class="columns is-centered">
          <div class="column is-half">
-            <div class="card">
+            <div class="card" data-aos="flip-left">
                <div class="notification is-danger is-light">
                   <button class="delete"></button>
-                  <strong>Sorry, Something went wrong !</strong>
+                  <strong> Sorry, Something went wrong ! </strong>
                </div>
             </div>
          </div>
@@ -61,9 +61,6 @@ const renderErrorMsg = () => {
 `;
   errorMsgHTML.insertAdjacentHTML("beforeend", errorMsg);
 };
-
-// TODO : add https and cors
-
 function getApis() {
   apiList.innerHTML = "";
   count.textContent = "";
@@ -80,6 +77,8 @@ function getApis() {
       clearLoader();
       entries.forEach((el) => {
         if (el.Auth == "") el.Auth = "No Auth";
+        if (el.Cors == "") el.Cors = "No";
+        if (el.HTTPS == "") el.HTTPS = "No";
         displayApi(el);
       });
     })
@@ -95,17 +94,35 @@ function getApis() {
 const displayApi = (el) => {
   let layout = `
         <div class="column  is-6">
-            <div class="card  has-background-grey-lighter">
+            <div class="card  has-background-grey-lighter" data-aos="fade-up-left">
                <div class="card-content">
                   <h3 class="title is-4"> ${el.API} </h3>
-                  <p class="has-text-grey-darker is-spaced"> ${el.Description} </p>
-                  <h6 class="title is-spaced is-6 pt-3"> Auth Type : ${el.Auth} </h6>
+                  <p class=" subtitle has-text-grey-darker is-spaced"> ${el.Description} </p>
+                <div class="field is-grouped is-grouped-multiline is-justify-content-space-evenly">
+                <div class="control">
+                  <div class="tags has-addons are-small">
+                    <span class="tag is-link">Auth Type </span>
+                    <span class="tag has-background-grey-light"> ${el.Auth}</span>
+                  </div>
+                </div>
+                <div class="control">
+                  <div class="tags has-addons are-small">
+                    <span class="tag is-link">CORS</span>
+                    <span class="tag has-background-grey-light">${el.Cors}</span>
+                  </div>
+                </div>
+                <div class="control">
+                  <div class="tags has-addons are-small">
+                    <span class="tag is-link">HTTPS</span>
+                    <span class="tag has-background-grey-light"> ${el.HTTPS}</span>
+                  </div>
+                </div>
+              </div>
                   <a href=${el.Link} class="button is-spaced is-info is-outlined" target="_blank"> View </a>
                </div>
             </div>
          </div>
         `;
-
   apiList.insertAdjacentHTML("beforeend", layout);
 };
 
@@ -120,3 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 });
+
+//AOS:  
+    AOS.init();
+  
